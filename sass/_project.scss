@@ -71,7 +71,8 @@
             margin-bottom: 20px;
             @include transform_time(0.5s);
             @media #{$tab}{
-                margin-right: 15px;
+                margin-right: 8px;
+                 margin-bottom: 8px;
             }
             @media #{$medium_device}{
             

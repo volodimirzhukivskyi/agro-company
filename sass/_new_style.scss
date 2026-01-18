@@ -1,32 +1,37 @@
-.margin--reset{
-  margin:0 !important;
+.margin--reset {
+  margin: 0 !important;
 }
-.service_part_iner{
+.service_part_iner {
   display: flex;
 }
-.service-row{
+.service-row {
   margin-right: 0;
   margin-left: 0;
   display: grid;
-  @media #{$tab}{
-    grid-template-columns: 1fr 1fr;
+  @media #{$tab} {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px 0;
-
+  }
+  @media #{$small_mobile} {
+    gap: 10px;
   }
 }
-.service-row--bottom{
-  @media #{$tab}{
+.service-row--bottom {
+  @media #{$tab} {
+    display: none;
+  }
+}
+.service-row .col-lg-6 {
+  max-width: 100%;
+  @media #{$small_mobile} {
+    padding: 0;
+  }
+}
+.service-col--mobile {
   display: none;
-}
-}
-.service-row .col-lg-6{
-max-width: 100%;
-}
-.service-col--mobile{
-display: none;
-@media #{$tab}{
-  display: block;
-}
+  @media #{$tab} {
+    display: block;
+  }
 }
 .owl-carousel {
   height: 100%;
@@ -85,7 +90,6 @@ display: none;
 /* solution section */
 /* interactive block */
 
-
 .machine-wrapper {
   max-width: 1200px;
   margin: 0 auto;
@@ -121,6 +125,10 @@ display: none;
   position: relative;
   box-shadow: 0 0 0 0 rgba(211, 122, 44, 0.6);
   animation: hotspot-pulse 5s infinite;
+   @media #{$small_mobile} {
+    width: 15px;
+    height: 15px;
+    }
 }
 
 @keyframes hotspot-pulse {
@@ -160,7 +168,10 @@ display: none;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
-  transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
   z-index: 10;
 }
 
@@ -168,8 +179,7 @@ display: none;
 .hotspot.is-active .hotspot__popup {
   opacity: 1;
   visibility: visible;
-   transform: translate3d(0, 10px, 0);
-
+  transform: translate3d(0, 10px, 0);
 }
 
 .hotspot__popup strong {
@@ -178,7 +188,6 @@ display: none;
   font-weight: 700;
   color: #2b2b2b;
   margin-bottom: 12px;
-  
 }
 
 .hotspot__popup p {
@@ -199,12 +208,12 @@ display: none;
   transform: rotate(45deg);
   box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.06);
 }
-.hotspot__popup-media{
-    margin-bottom: 12px;
+.hotspot__popup-media {
+  margin-bottom: 12px;
 }
-.hotspot__popup-content{
-    text-align: left;
+.hotspot__popup-content {
+  text-align: left;
 }
-.hotspot__popup-actions{
-    text-align: left;
+.hotspot__popup-actions {
+  text-align: left;
 }

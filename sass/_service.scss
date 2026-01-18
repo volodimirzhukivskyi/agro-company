@@ -64,7 +64,6 @@
     @media #{$tab} {
       margin-top: 25px;
       text-align: center;
-
     }
     @media #{$medium_device} {
     }
@@ -75,13 +74,13 @@
         margin-bottom: 40px;
       }
     }
-     &--dec {
+    &--dec {
       display: block;
       @media #{$tab} {
-         text-align: center;
-         & a{
-            display: none;
-         }
+        text-align: center;
+        & a {
+          display: none;
+        }
       }
     }
     h2 {
@@ -137,6 +136,10 @@
     img {
       display: block;
       margin-left: auto;
+      @media #{$small_mobile} {
+        height: 40px;
+        width: 40px;
+      }
     }
     h4 {
       font-size: 22px;
@@ -145,6 +148,10 @@
       @media #{$tab} {
       }
       @media #{$medium_device} {
+      }
+      @media #{$small_mobile} {
+        font-size: 16px;
+        font-weight: 700;
       }
     }
     p {

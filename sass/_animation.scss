@@ -170,6 +170,8 @@
 
 /* Banner Image Parallax */
 .banner_slide img {
+    height: 100%;
+    object-fit: cover;
     transition: transform 0.1s ease-out;
     will-change: transform;
 }
