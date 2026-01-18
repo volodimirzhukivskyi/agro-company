@@ -12,7 +12,8 @@ body{
     }
 }
 section{
-    overflow: hidden !important;
+    overflow-x: clip !important;
+    
 }
 .message_submit_form:focus{
     outline: none;

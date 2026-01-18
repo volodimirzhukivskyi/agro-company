@@ -125,10 +125,10 @@
   position: relative;
   box-shadow: 0 0 0 0 rgba(211, 122, 44, 0.6);
   animation: hotspot-pulse 5s infinite;
-   @media #{$small_mobile} {
+  @media #{$small_mobile} {
     width: 15px;
     height: 15px;
-    }
+  }
 }
 
 @keyframes hotspot-pulse {
@@ -207,9 +207,15 @@
   background: #ffffff;
   transform: rotate(45deg);
   box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.06);
+  @media #{$tab} {
+    display: none;
+  }
 }
 .hotspot__popup-media {
   margin-bottom: 12px;
+  & img{
+    max-width: 60px;
+  }
 }
 .hotspot__popup-content {
   text-align: left;

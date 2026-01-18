@@ -13,7 +13,7 @@ body {
 }
 
 section {
-  overflow: hidden !important;
+  overflow-x: clip !important;
 }
 
 .message_submit_form:focus {
@@ -5019,9 +5019,17 @@ h6 {
   transform: rotate(45deg);
   box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.06);
 }
+@media (max-width: 991px) {
+  .hotspot__popup::after {
+    display: none;
+  }
+}
 
 .hotspot__popup-media {
   margin-bottom: 12px;
+}
+.hotspot__popup-media img {
+  max-width: 60px;
 }
 
 .hotspot__popup-content {
