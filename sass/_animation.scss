@@ -1,0 +1,321 @@
+/* ===================================
+   SCROLL ANIMATIONS
+   =================================== */
+
+/* Базові стилі для анімованих елементів */
+.animate-fade-up,
+.animate-fade-left,
+.animate-fade-down,
+.animate-scale,
+.animate-pulse-delay {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Fade Up Animation */
+.animate-fade-up {
+    transform: translateY(50px);
+}
+
+.animate-fade-up.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Fade Left Animation */
+.animate-fade-left {
+    transform: translateX(-50px);
+}
+
+.animate-fade-left.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Fade Down Animation */
+.animate-fade-down {
+    transform: translateY(-50px);
+}
+
+.animate-fade-down.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Scale Animation */
+.animate-scale {
+    transform: scale(0.8);
+}
+
+.animate-scale.animated {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+.animate-pulse-delay.animated {
+    animation: pulse 2s ease-in-out infinite;
+    opacity: 1;
+}
+
+/* ===================================
+   HOVER EFFECTS
+   =================================== */
+
+/* Service Cards Hover */
+.single_service_text {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.single_service_text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.single_service_text.hover-effect {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.single_service_text.hover-effect::before {
+    left: 100%;
+}
+
+.single_service_text img {
+    transition: transform 0.3s ease;
+}
+
+.single_service_text.hover-effect img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Portfolio Hover */
+.portfolio_box {
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.portfolio_box:hover {
+    transform: translateY(-5px);
+}
+
+.single_portfolio {
+    overflow: hidden;
+}
+
+.single_portfolio img {
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.single_portfolio img.zoom-effect {
+    transform: scale(1.1);
+}
+
+/* ===================================
+   HOTSPOT ANIMATIONS
+   =================================== */
+
+
+
+
+/* ===================================
+   BANNER ANIMATIONS
+   =================================== */
+
+.banner_text_iner {
+    transition: opacity 0.5s ease;
+}
+
+.banner_text_iner h5 {
+    animation: fadeInUp 0.6s ease 0.2s both;
+}
+
+.banner_text_iner h2 {
+    animation: fadeInUp 0.6s ease 0.4s both;
+}
+
+.banner_text_iner p {
+    animation: fadeInUp 0.6s ease 0.6s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Banner Image Parallax */
+.banner_slide img {
+    transition: transform 0.1s ease-out;
+    will-change: transform;
+}
+
+/* ===================================
+   BULLET CARDS ANIMATION
+   =================================== */
+
+.bullet_card {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.bullet_card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: #ff512f;
+    transition: height 0.3s ease;
+}
+
+
+
+.bullet_card:hover {
+    transform: translateX(5px);
+}
+
+/* ===================================
+   COUNTER ANIMATION
+   =================================== */
+
+.single_counter {
+    overflow: hidden;
+}
+
+.counter {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.single_counter:hover .counter {
+    transform: scale(1.1);
+    color: #ff512f;
+}
+
+/* ===================================
+   BLOG CARDS ANIMATION
+   =================================== */
+
+.single_blog {
+    transition: all 0.3s ease;
+}
+
+.single_blog:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.single_blog img {
+    transition: transform 0.5s ease;
+}
+
+.single_blog:hover img {
+    transform: scale(1.05);
+}
+
+/* ===================================
+   LOADING ANIMATION
+   =================================== */
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading-shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(to right, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+    background-size: 1000px 100%;
+}
+
+/* ===================================
+   SECTION TITLE ANIMATION
+   =================================== */
+
+.section_tittle h2 span {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.section_tittle.animated h2 span {
+    animation: bounce 0.6s ease 0.3s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* ===================================
+   RESPONSIVE ADJUSTMENTS
+   =================================== */
+
+@media (max-width: 768px) {
+    .animate-fade-up,
+    .animate-fade-left,
+    .animate-fade-down {
+        transform: translateY(30px);
+    }
+    
+    .animate-fade-left {
+        transform: translateY(30px);
+    }
+    
+    .single_service_text.hover-effect {
+        transform: translateY(-5px);
+    }
+}
+
+/* ===================================
+   SMOOTH SCROLL
+   =================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Disable animations on reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
