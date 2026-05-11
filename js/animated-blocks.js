@@ -138,12 +138,6 @@
             }
         );
         
-        // Паралакс ефект для банера
-        $(window).on('scroll', function() {
-            const scrolled = $(window).scrollTop();
-            $('.banner_slide img').css('transform', 'translateY(' + (scrolled * 0.3) + 'px)');
-        });
-        
         // Анімація для bullet cards
         $('.bullet_card').on('click', function(e) {
             e.preventDefault();

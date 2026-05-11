@@ -1,37 +1,56 @@
 <?php
 
-    $to = "rockybd1995@gmail.com";
-    $from = $_REQUEST['email'];
-    $name = $_REQUEST['name'];
-    $subject = $_REQUEST['subject'];
-    $number = $_REQUEST['number'];
-    $cmessage = $_REQUEST['message'];
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    exit('Method not allowed');
+}
 
-    $headers = "From: $from";
-	$headers = "From: " . $from . "\r\n";
-	$headers .= "Reply-To: ". $from . "\r\n";
-	$headers .= "MIME-Version: 1.0\r\n";
-	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+function field_value($key)
+{
+    return trim($_POST[$key] ?? '');
+}
 
-    $subject = "You have a message from your Bitmap Photography.";
+$name = field_value('name');
+$email = filter_var(field_value('email'), FILTER_VALIDATE_EMAIL) ?: '';
+$phone = field_value('phone') ?: field_value('number');
+$subject = field_value('subject') ?: 'New request from Orbis Agro website';
+$message = field_value('message') ?: 'Consultation request from short form.';
 
-    $logo = 'img/logo.png';
-    $link = '#';
+if ($name === '' || $phone === '') {
+    http_response_code(400);
+    exit('Please fill in name and phone.');
+}
 
-	$body = "<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><title>Express Mail</title></head><body>";
-	$body .= "<table style='width: 100%;'>";
-	$body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
-	$body .= "<a href='{$link}'><img src='{$logo}' alt=''></a><br><br>";
-	$body .= "</td></tr></thead><tbody><tr>";
-	$body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
-	$body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
-	$body .= "</tr>";
-	$body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$csubject}</td></tr>";
-	$body .= "<tr><td></td></tr>";
-	$body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
-	$body .= "</tbody></table>";
-	$body .= "</body></html>";
+$to = 'info@orbis-agro.com';
+$safeName = htmlspecialchars($name, ENT_QUOTES, 'UTF-8');
+$safeEmail = htmlspecialchars($email, ENT_QUOTES, 'UTF-8');
+$safePhone = htmlspecialchars($phone, ENT_QUOTES, 'UTF-8');
+$safeSubject = htmlspecialchars($subject, ENT_QUOTES, 'UTF-8');
+$safeMessage = nl2br(htmlspecialchars($message, ENT_QUOTES, 'UTF-8'));
 
-    $send = mail($to, $subject, $body, $headers);
+$headers = "From: Orbis Agro <no-reply@orbis-agro.com>\r\n";
+if ($email !== '') {
+    $headers .= "Reply-To: {$email}\r\n";
+}
+$headers .= "MIME-Version: 1.0\r\n";
+$headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-?>
+$body = "<!doctype html><html lang='uk'><head><meta charset='UTF-8'><title>{$safeSubject}</title></head><body>";
+$body .= "<h2>New website request</h2>";
+$body .= "<p><strong>Name:</strong> {$safeName}</p>";
+$body .= "<p><strong>Phone:</strong> {$safePhone}</p>";
+if ($safeEmail !== '') {
+    $body .= "<p><strong>Email:</strong> {$safeEmail}</p>";
+}
+$body .= "<p><strong>Subject:</strong> {$safeSubject}</p>";
+$body .= "<p><strong>Message:</strong><br>{$safeMessage}</p>";
+$body .= "</body></html>";
+
+$sent = mail($to, $subject, $body, $headers);
+
+if (!$sent) {
+    http_response_code(500);
+    exit('Message could not be sent.');
+}
+
+echo 'OK';

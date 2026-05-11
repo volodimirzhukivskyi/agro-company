@@ -1,5 +1,4 @@
 /**************** common css start ****************/
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300i,300,400i,400,700|Poppins:400,500,600,700");
 /* line 3, ../../01 cl html template/New folder/May 2019/178 Real Estate/Real Estate Html/sass/_common.scss */
 body {
   font-family: "Poppins", sans-serif;
@@ -5909,9 +5908,6 @@ h6 {
 .modal-message .modal-dialog .modal-content .modal-header p {
   display: block;
 }
-
-/*# sourceMappingURL=style.css.map */
-
 .owl-carousel {
   height: 100%;
 }
