@@ -27,38 +27,38 @@
          <div class="row">
             <div class="col-lg-12">
                <nav class="navbar navbar-expand-lg navbar-light">
-                  <a class="navbar-brand" href="index.html"> <img src="img/logo.png" alt="logo"> </a>
+                  <a class="navbar-brand" href="index.html"> <img src="./assets/img/orbis_logo.png" alt="Orbis Agro"> </a>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                      <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse main-menu-item" id="navbarNav">
                      <ul class="navbar-nav">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                            <a class="nav-link" href="index.html">Головна</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item active">
                            <a class="nav-link" href="about.html">Про нас</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="services.html">Послуги</a>
                         </li>
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" role="button"
                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              blog
+                              Новини
                            </a>
-                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdownBlog">
                               <a class="dropdown-item" href="blog.html">Новини</a>
                               <a class="dropdown-item" href="single-blog.html">Стаття</a>
                            </div>
                         </li>
                         <li class="nav-item dropdown">
-                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownCompany" role="button"
                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                              pages
+                              Компанія
                            </a>
-                           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                           <div class="dropdown-menu" aria-labelledby="navbarDropdownCompany">
                               <a class="dropdown-item" href="project.html">Проєкти</a>
                               <a class="dropdown-item" href="apartment.html">Галерея</a>
                               <a class="dropdown-item" href="elements.html">Елементи</a>
@@ -76,146 +76,179 @@
    </header>
    <!--::menu part end::-->
 
-   <!--::breadcrumb part start::-->
-   <section class="breadcrumb blog_bg">
+   <main class="about-page">
+   <section class="about-hero">
+      <div class="container">
+         <div class="row align-items-end">
+            <div class="col-lg-8">
+               <div class="about-hero__content">
+                  <span class="section-eyebrow">Про компанію</span>
+                  <h1>Інженерна модернізація агротехніки для точного посіву</h1>
+                  <p>Orbis Agro впроваджує електроприводи, системи контролю висіву та рішення для дозування добрив,
+                     щоб господарства отримували прогнозований результат без заміни наявної техніки.</p>
+                  <div class="about-hero__actions">
+                     <a href="contact.html" class="btn_1">Обговорити модернізацію</a>
+                     <a href="services.html" class="about-link">Переглянути послуги</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-lg-4">
+               <div class="about-hero__panel">
+                  <span>Фокус Orbis Agro</span>
+                  <strong>точність, контроль, економіка посіву</strong>
+                  <p>Працюємо з просапними й зерновими сівалками, системами внесення добрив, обприскувачами та
+                     комбайнами.</p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="about-company section-padding">
+      <div class="container">
+         <div class="row align-items-center">
+            <div class="col-lg-6">
+               <div class="about-company__media">
+                  <img src="./assets/img/project/main_pgoto.jpg" alt="Модернізована сівалка Orbis Agro у полі">
+                  <div class="about-company__badge">
+                     <span>Польовий підхід</span>
+                     <strong>від аудиту техніки до запуску в сезон</strong>
+                  </div>
+               </div>
+            </div>
+            <div class="offset-lg-1 col-lg-5">
+               <div class="about-company__text">
+                  <span class="section-eyebrow">Що ми робимо</span>
+                  <h2>Допомагаємо аграріям отримати більше контролю з техніки, яка вже працює в господарстві.</h2>
+                  <p>Команда Orbis Agro поєднує агроінженерію, електроніку та практичний досвід сервісу. Ми оцінюємо
+                     парк техніки, підбираємо комплектацію, монтуємо обладнання та супроводжуємо запуск у полі.</p>
+                  <div class="about-company__points">
+                     <div>
+                        <i class="fas fa-microchip"></i>
+                        <span>Електроніка і контроль кожної секції</span>
+                     </div>
+                     <div>
+                        <i class="fas fa-seedling"></i>
+                        <span>Точний висів і стабільна норма внесення</span>
+                     </div>
+                     <div>
+                        <i class="fas fa-tools"></i>
+                        <span>Монтаж, налаштування та сервісна підтримка</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="about-metrics">
+      <div class="container">
+         <div class="about-metrics__grid">
+            <div class="about-metric">
+               <span class="counter">1000</span>
+               <p>варіантів модернізації під різні агрегати</p>
+            </div>
+            <div class="about-metric">
+               <span class="counter">5000</span>
+               <p>клієнтів і партнерів у сегменті агротехніки</p>
+            </div>
+            <div class="about-metric">
+               <span class="counter">150</span>
+               <p>фахівців у команді інженерії, монтажу та сервісу</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="about-values section-padding">
+      <div class="container">
+         <div class="row justify-content-between align-items-end">
+            <div class="col-lg-6">
+               <div class="section_tittle">
+                  <h2>Наш <span>підхід</span></h2>
+               </div>
+            </div>
+            <div class="col-lg-5">
+               <p class="about-section-lead">Кожен проєкт починається з технічної діагностики й завершується
+                  перевіркою роботи системи в реальних умовах.</p>
+            </div>
+         </div>
+         <div class="about-values__grid">
+            <div class="about-value">
+               <i class="fas fa-drafting-compass"></i>
+               <h3>Індивідуальна конфігурація</h3>
+               <p>Підбираємо рішення під тип сівалки, культуру, ширину захвату, норму висіву та задачі господарства.</p>
+            </div>
+            <div class="about-value">
+               <i class="fas fa-chart-line"></i>
+               <h3>Вимірюваний ефект</h3>
+               <p>Ставимо акцент на контроль норми, рівномірність висіву, зниження перевитрат і прозору економіку.</p>
+            </div>
+            <div class="about-value">
+               <i class="fas fa-cogs"></i>
+               <h3>Сервісна готовність</h3>
+               <p>Після монтажу команда навчає операторів, допомагає з калібруванням і супроводжує запуск сезону.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="about-process padding_bottom">
       <div class="container">
          <div class="row">
-            <div class="col-lg-12">
-               <div class="breadcrumb_iner">
-                  <div class="breadcrumb_iner_item">
-                     <h2>about us</h2>
+            <div class="col-lg-5">
+               <span class="section-eyebrow">Як працюємо</span>
+               <h2>Зрозумілий процес від першого аудиту до результату в полі.</h2>
+            </div>
+            <div class="col-lg-7">
+               <div class="about-process__list">
+                  <div class="about-process__item">
+                     <span>01</span>
+                     <div>
+                        <h3>Аналіз техніки</h3>
+                        <p>Визначаємо стан агрегату, цілі модернізації та технічні обмеження.</p>
+                     </div>
+                  </div>
+                  <div class="about-process__item">
+                     <span>02</span>
+                     <div>
+                        <h3>Підбір комплектації</h3>
+                        <p>Формуємо рішення з електроприводів, контролерів, датчиків і систем внесення.</p>
+                     </div>
+                  </div>
+                  <div class="about-process__item">
+                     <span>03</span>
+                     <div>
+                        <h3>Монтаж і налаштування</h3>
+                        <p>Встановлюємо обладнання, калібруємо секції та перевіряємо стабільність роботи.</p>
+                     </div>
+                  </div>
+                  <div class="about-process__item">
+                     <span>04</span>
+                     <div>
+                        <h3>Супровід у сезон</h3>
+                        <p>Допомагаємо операторам швидко адаптуватися до оновленої системи керування.</p>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
       </div>
    </section>
-   <!--::breadcrumb part start::-->
 
-   <!--::team part end::-->
-   <section class="about_part section-padding">
+   <section class="about-cta">
       <div class="container">
-         <div class="row">
-            <div class="section_tittle">
-               <h2><span>Про нас</span> us</h2>
+         <div class="about-cta__inner">
+            <div>
+               <span class="section-eyebrow">Готові до модернізації</span>
+               <h2>Оцінимо вашу техніку та запропонуємо рішення під конкретні польові задачі.</h2>
             </div>
-         </div>
-         <div class="row">
-            <div class="col-lg-6 col-md-6">
-               <div class="about_img">
-                  <img src="img/about.png" alt="">
-               </div>
-            </div>
-            <div class="offset-lg-1 col-lg-5 col-sm-8 col-md-6">
-               <div class="about_text">
-                  <h2>Hello City We are
-                     leader in <span>proparties.</span></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed ips
-                     eiusmod tempor incididunt ut labore et dolore magna aliqua isuspendisse
-                     ultrices gravida. Risus. </p>
-                  <a href="#" class="btn_1">learn More</a>
-                  <div class="about_part_counter">
-                     <div class="single_counter">
-                        <span class="counter">100</span>
-                        <p>project</p>
-                     </div>
-                     <div class="single_counter">
-                        <span class="counter">300</span>
-                        <p>clients</p>
-                     </div>
-                     <div class="single_counter">
-                        <span class="counter">150</span>
-                        <p>member</p>
-                     </div>
-                  </div>
-               </div>
-            </div>
+            <a href="contact.html" class="btn_1">Зв'язатися з нами</a>
          </div>
       </div>
    </section>
-   <!--::team part end::-->
-
-   <!--::team part end::-->
-   <section class="project_gallery padding_bottom">
-      <div class="container-fluid">
-         <div class="row">
-            <div class="col-lg-12">
-               <div class="project_gallery_tittle">
-                  <h2><span>Точний</span> посів</h2>
-               </div>
-               <div class="grid">
-                  <div class="grid-sizer"></div>
-                  <div class="grid-item big_weight">
-                     <div class="project_img">
-                        <img src="img/gallery/gallery_1.png" alt="">
-                        <div class="project_gallery_hover_text">
-                           <p>Агроінженерія</p>
-                           <h3>Модернізація посівної техніки </h3>
-                           <ul>
-                              <li><a href=""><span class="flaticon-bath"></span></a> 04</li>
-                              <li><a href=""><span class="flaticon-bed"></span></a> 03</li>
-                              <li><a href=""><span class="flaticon-frame"></span></a> 2400 sqft</li>
-                              <li><a href=""><span class="ti-heart"></span></a> like</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="grid-item big_height">
-                     <div class="project_img">
-                        <img src="img/gallery/gallery_4.png" alt="">
-                        <div class="project_gallery_hover_text">
-                           <p>Агроінженерія</p>
-                           <h3>Модернізація посівної техніки </h3>
-                           <ul>
-                              <li><a href=""><span class="flaticon-bath"></span></a> 04</li>
-                              <li><a href=""><span class="flaticon-bed"></span></a> 03</li>
-                              <li><a href=""><span class="flaticon-frame"></span></a> 2400 sqft</li>
-                              <li><a href=""><span class="ti-heart"></span></a> like</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="grid-item">
-                     <div class="project_img">
-                        <img src="img/gallery/gallery_2.png" alt="">
-                        <div class="project_gallery_hover_text">
-                           <p>Агроінженерія</p>
-                           <h3>Модернізація посівної техніки </h3>
-                           <ul>
-                              <li><a href=""><span class="flaticon-bath"></span></a> 04</li>
-                              <li><a href=""><span class="flaticon-bed"></span></a> 03</li>
-                              <li><a href=""><span class="flaticon-frame"></span></a> 2400 sqft</li>
-                              <li><a href=""><span class="ti-heart"></span></a> like</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="grid-item">
-                     <div class="project_img">
-                        <img src="img/gallery/gallery_3.png" alt="">
-                        <div class="project_gallery_hover_text">
-                           <p>Агроінженерія</p>
-                           <h3>Модернізація посівної техніки </h3>
-                           <ul>
-                              <li><a href=""><span class="flaticon-bath"></span></a> 04</li>
-                              <li><a href=""><span class="flaticon-bed"></span></a> 03</li>
-                              <li><a href=""><span class="flaticon-frame"></span></a> 2400 sqft</li>
-                              <li><a href=""><span class="ti-heart"></span></a> like</li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </section>
-   <!--::team part end::-->
-
-
-   <!--::review_part start::-->
-
-   <!--::review_part end::-->
+   </main>
 
    <!--::footer_part start::-->
    <footer class="footer_part">
@@ -251,28 +284,26 @@
             </div>
             <div class="col-sm-6 col-lg-3">
                <div class="single_footer_part">
-                  <h4>Important Link</h4>
+                  <h4>Навігація</h4>
                   <ul class="list-unstyled">
-                     <li><a href=""> WHMCS-bridge</a></li>
-                     <li><a href="">Search Domain</a></li>
-                     <li><a href="">My Account</a></li>
-                     <li><a href="">Shopping Cart</a></li>
-                     <li><a href="">Our Shop</a></li>
+                     <li><a href="about.html">Про нас</a></li>
+                     <li><a href="services.html">Послуги</a></li>
+                     <li><a href="project.html">Проєкти</a></li>
+                     <li><a href="contact.html">Контакти</a></li>
                   </ul>
                </div>
             </div>
             <div class="col-sm-6 col-lg-3">
                <div class="single_footer_part">
-                  <h4>Newsletter</h4>
-                  <p>Heaven fruitful doesn't over lesser in days. Appear creeping seasons deve behold bearing days open
-                  </p>
+                  <h4>Консультація</h4>
+                  <p>Залиште email, і ми зв'яжемося щодо модернізації вашої техніки.</p>
                   <div id="mc_embed_signup">
                      <form target="_blank"
                         action="#"
-                        method="post" class="subscribe_form relative mail_part" required>
-                        <input type="email" name="email" id="newsletter-form-email" placeholder="Email Address"
-                           class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Email Address '"
-                           required="" type="email">
+                        method="post" class="subscribe_form relative mail_part">
+                        <input type="email" name="email" id="newsletter-form-email" placeholder="Ваш email"
+                           class="placeholder hide-on-focus" onfocus="this.placeholder = ''" onblur="this.placeholder = ' Ваш email '"
+                           required>
                         <button type="submit" name="submit" id="newsletter-submit"
                            class="email_icon newsletter-submit button-contactForm"><i
                               class="far fa-paper-plane"></i></button>
